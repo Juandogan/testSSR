@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-sm navbar-light   fixed-top bg-body-tertiary "  style="background-color: white;">
+  <div class="container-fluid container" >
+
+      <img src="../assets/angular icon.png" alt="" width="50px" >
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent" >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"  routerLink="/"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="adm" routerLinkActive="active" >Crear Post</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="z-index:999999!important">
+            <li><a class="dropdown-item" >INICIO</a></li>
+            <li><a class="dropdown-item" routerLink="/adm" routerLinkActive="activeFondoBlack">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" routerLink="/" routerLinkActive="activeFondoBlack">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<nav class="nav nav-fondo fixed-top bg-body-tertiary container "  style="margin-top: 65px; z-index: 1;">
+  <a class="nav-link position-relative" aria-current="page" style="background-color: black;" routerLink="/" routerLinkActive="activeFondoBlack" [routerLinkActiveOptions]="{exact: true}">
+    Get Start
+    <!-- <span class="position-absolute top-6 start-100 translate-middle badge rounded-pill bg-danger" style="margin-top: 5px;">
+      2
+      <span class="visually-hidden">unread messages</span> -->
+    <!-- </span> -->
+  </a>
+  <a class="nav-link"  routerLinkActive="active" routerLink="/adm"  routerLinkActive="activeFondoBlack">Routing</a>
+  <a class="nav-link">Performance</a>
+  <a class="nav-link">Componentes</a>
+  <a class="nav-link " tabindex="-1" aria-disabled="true">Diseño</a>
+  <a class="nav-link "  tabindex="-1" aria-disabled="true">CSS</a>
+  <a class="nav-link "  tabindex="-1" aria-disabled="true">BackEnd</a>
+  <a class="nav-link "  tabindex="-1" aria-disabled="true">Deploy</a>
+
+</nav>

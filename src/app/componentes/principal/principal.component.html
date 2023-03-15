@@ -1,0 +1,38 @@
+  <!-- Loading -->
+  <div *ngIf="loading" class="text-center" >
+    <div  class="spinner-border " role="status" style="margin-top: 30vh;">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+    <!-- Loading -->
+
+    <div  *ngIf="!loading"   [@listAnimation] class="h-150 p-5 text-white bg-dark rounded-1 shadow" style="height:300px;">
+
+
+      <h3><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+      </svg><span style="margin-left:5px; "> Bienvenidxs a Angular Documents</span> </h3>
+      <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px; font-weight: 100;">
+
+        Nuestro objetivo es proporcionar a los desarrolladores una fuente <b>confiable de información sobre Angular</b>, con tutoriales paso a paso, consejos y trucos, ejemplos prácticos, buenas prácticas y mucho más. Creemos que la programación con Angular no debería ser una tarea difícil o tediosa, sino algo que todos puedan disfrutar y encontrar útil.
+      </p>
+      <button class="btn btn-outline-light" type="button">Iniciar sesión</button>
+      </div>
+
+    <br>
+<div *ngIf="!loading"   [@listAnimation] >
+  <div class="row">
+    <div style="text-align: left;">
+<p style="margin: 0px ; padding:0px ;margin-left:15px">ÚLTIMOS POST(10)</p>
+<hr style="margin: 0px ; padding:0px ; margin-top: 5px; margin-bottom: 5px;">
+</div>
+
+  <div class="col-3" *ngFor="let articulo of data let i = index">
+    <app-card [data]="articulo" [id]="articulo?._id"  [@listAnimation]="data.lenght"></app-card>
+    <br>
+      </div>
+       </div>
+       <br>
+      <app-footer></app-footer>
+</div>
+

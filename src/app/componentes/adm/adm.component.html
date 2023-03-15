@@ -1,0 +1,35 @@
+
+
+<form #miFormulario="ngForm" class="margin-form" >
+<div class="mt-4">
+ <h6 >Categoria</h6>
+
+<input [(ngModel)]="this.categoria" type="text" name="categoria" class="form-control" placeholder="Categoria" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+<div class="input-group mb-3 mt-4">
+  <span class="input-group-text" id="basic-addon1">Titulo</span>
+  <input  [(ngModel)]="this.titulo" type="text" name="titulo"class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3 mt-4">
+  <span class="input-group-text" id="basic-addon1">Subtitulo</span>
+  <input  [(ngModel)]="this.subtitulo"  name="subtitulo" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group">
+  <span class="input-group-text">With textarea</span>
+  <textarea [(ngModel)]="this.articulo"  name="articulo"class="form-control" aria-label="With textarea"></textarea>
+</div>
+
+<tx-document-editor
+    width="1000px"
+    height="500px"
+    webSocketURL="wss://backend.textcontrol.com?access-token=EUuILZYxQE8j2LNDEKfU">
+</tx-document-editor>
+<div>
+  <button (click)="onClickLoad()" class="btn btn-primary">Load Document</button>
+  <button (click)="onClickSave()" class="btn btn-primary">Save Document</button>
+</div>
+
+<button class="btn btn-dark" (click)="submitForm()">Enviar</button>
+</form>

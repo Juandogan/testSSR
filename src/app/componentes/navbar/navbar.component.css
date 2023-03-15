@@ -1,0 +1,17 @@
+li a{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color:rgb(173, 173, 173);border-radius: 10px;}
+
+nav{ border-radius: 3px!important;}
+.nav-fondo{
+  background-color: rgb(192, 192, 192);
+
+
+}
+.active{color:rgba(71, 71, 71, 0.582); font-weight: 800;;color:white}
+.activeFondoBlack{background-color: black;color:white}
+/* img{filter:drop-shadow(1px 1px 3px rgba(255, 0, 0, 0.603))} */
+ a{color:white; font-size: 14px; cursor: pointer;}
+
+ /* a:hover{color:rgb(255, 255, 255); background-color: black;} */
+ a:active{color:rgb(0, 0, 0); background-color: rgba(180, 180, 180, 0.301); border-radius: 10px;}
+
+

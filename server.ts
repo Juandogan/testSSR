@@ -1,10 +1,14 @@
 import 'zone.js/node';
-
 import { APP_BASE_HREF } from '@angular/common';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import { existsSync } from 'fs';
 import { join } from 'path';
+const bodyParser = require ('body-parser');
+
+const mongoose = require('mongoose');
+const { Data } = require('./models');
+
 
 import { AppServerModule } from './src/main.server';
 
@@ -25,6 +29,40 @@ export function app(): express.Express {
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
+  server.use(bodyParser.json({limit: '200mb'}));
+  server.use(bodyParser.urlencoded({limit: '200mb', extended: true}));
+
+server.get('/data', async (req, res) => {
+  const data = await Data.find();
+  res.json(data);
+});
+
+server.post('/data' , async (req, res)=>{
+     const data = new Data({
+      categoria:req.body.categoria,
+      titulo:req.body.titulo,
+      subtitulo:req.body.subtitulo,
+      articulo:req.body.articulo
+
+    });
+       await data.save();
+        res.json('Articulo creado!');
+
+});
+
+server.delete('/data/:_id', async (req,res) => {
+  const { _id } = req.params;
+    await Data.findByIdAndDelete(_id);
+      res.json("Eliminado!");
+});
+
+
+
+
+
+
+
+
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
   }));
@@ -56,5 +94,18 @@ const moduleFilename = mainModule && mainModule.filename || '';
 if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
   run();
 }
+
+
+mongoose.connect('mongodb+srv://ccamAdmin:UNdianuevo.12@ccam.qpdpzqh.mongodb.net/?retryWrites=true&w=majority', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'Error de conexión:'));
+db.once('open', () => {
+console.log('Conexión exitosa a la base de datos');
+});
 
 export * from './src/main.server';
