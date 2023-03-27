@@ -15,6 +15,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterLinkActive } from '@angular/router';
 import { DocumentEditorModule } from '@txtextcontrol/tx-ng-document-editor'
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { DocumentEditorModule } from '@txtextcontrol/tx-ng-document-editor'
   ],
 
   imports: [
+    CKEditorModule,
     FormsModule,
     RouterLinkActive,
     BrowserAnimationsModule,
