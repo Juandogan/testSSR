@@ -21,6 +21,7 @@ export class PrincipalComponent {
   title = 'testSSR';
   data:any
   loading = true
+  cantidad:any
   constructor(private crudService:CrudService){
 
   }
@@ -30,7 +31,8 @@ export class PrincipalComponent {
   this.data = res as Data
   this.data = this.data.reverse()
   this.loading = false
-    })
+  this.cantidad = this.data.lenght
+      })
   }
 
   trackByFn(index: number, data: any) {

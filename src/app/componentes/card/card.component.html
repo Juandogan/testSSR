@@ -1,10 +1,16 @@
 <div class="card mt-2" >
 
-  <h5 class="card-header" style="background-color: rgba(0, 0, 0, 0.589); color:aliceblue">{{data?.categoria}}</h5>
+  <h5 class="card-header">{{data?.categoria}}</h5>
   <div class="card-body shadow rounded-1"   >
-    <img src="../../../assets/image-7.png"  width="100%" alt="" class="rounded-1 shadow" style="padding:0px">
-        <h5 class="card-title mt-3" >{{data?.titulo}}</h5>
-    <p style="line-height: 21px;" >{{data?.subtitulo}}</p>
+    <a  routerLink="articulo/{{data?._id}}" >
+    <img *ngIf="image" src="../../../assets/image-7.png"  width="100%" alt="" class="rounded-1 shadow p0" >
+        <h5 class="card-title mt-3" style="text-decoration: none!important; color:black; ">{{data?.titulo}}</h5>
+      </a>
+    <p *ngIf="image">{{data?.subtitulo}}</p>
+
+
+
+
 
     <!-- <a class="btn btn-dark btn-sm">Accion</a>
     <a (click)="borrar(id)" class="btn btn-dark btn-sm" style="margin-left:10px;">Borrar</a> -->

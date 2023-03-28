@@ -23,12 +23,12 @@
 <div *ngIf="!loading"   [@listAnimation] >
   <div class="row">
     <div style="text-align: left;">
-<p style="margin: 0px ; padding:0px ;margin-left:15px">ÚLTIMOS POST(10)</p>
+<p style="margin: 0px ; padding:0px ;margin-left:15px">ÚLTIMOS POST</p>
 <hr style="margin: 0px ; padding:0px ; margin-top: 5px; margin-bottom: 5px;">
 </div>
 
   <div class="col-3" *ngFor="let articulo of data let i = index">
-    <app-card [data]="articulo" [id]="articulo?._id"  [@listAnimation]="data.lenght"></app-card>
+    <app-card [data]="articulo" [id]="articulo?._id"  [image]=true [@listAnimation]="data.lenght"></app-card>
     <br>
       </div>
        </div>

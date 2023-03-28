@@ -1,2 +1,5 @@
-.card-header{font-size: 13px;}
+.card-header{font-size: 13px;background-color: rgba(0, 0, 0, 0.589); color:aliceblue}
 hr{padding:0px; margin-top: 20px; margin-bottom: 0px;}
+a{cursor:pointer;}
+p{line-height: 21px;}
+

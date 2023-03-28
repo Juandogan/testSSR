@@ -16,6 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterLinkActive } from '@angular/router';
 import { DocumentEditorModule } from '@txtextcontrol/tx-ng-document-editor'
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { ArticuloComponent } from './componentes/articulo/articulo.component';
+import { ResolveNotaService } from './servicios/resolve-nota.service';
+import { CrudService } from './servicios/crud.service';
 
 
 @NgModule({
@@ -27,6 +30,7 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     PrincipalComponent,
     DateConverterPipe,
     FooterComponent,
+    ArticuloComponent,
   ],
 
   imports: [
@@ -46,7 +50,7 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     DocumentEditorModule
 
   ],
-  providers: [],
+  providers: [ResolveNotaService, CrudService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

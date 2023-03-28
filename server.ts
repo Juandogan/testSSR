@@ -34,6 +34,7 @@ export function app(): express.Express {
 
 server.get('/data', async (req, res) => {
   const data = await Data.find();
+  console.log(data)
   res.json(data);
 });
 
@@ -56,10 +57,31 @@ server.delete('/data/:_id', async (req,res) => {
       res.json("Eliminado!");
 });
 
+server.get('/data/:_id' , async(req,res) => {
+  var aux = String(req.params._id)
+  console.log(aux)
+
+    try {
+        const articulo = await Data.findById({_id : aux})
+        if (articulo === null)   {
+          const articulo = await Data.findOne({indice : aux})
+
+          res.json(articulo)
+
+        }else {
+
+          res.json(articulo)
+
+        }
 
 
 
 
+      } catch (err) {
+        res.json('ID no encontrado..')
+      }
+
+});
 
 
 

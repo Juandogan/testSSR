@@ -32,7 +32,7 @@ export class CrudService {
   };
 
  //Pedir 1
-   getOneData(_id:Data){
+   getOneData(_id:any){
     return this.http.get(this.URL_API + `/${_id}`);
   };
 

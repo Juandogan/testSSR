@@ -11,6 +11,7 @@ export class CardComponent {
 
   @Input() data:any;
   @Input() id:any;
+  @Input() image:any;
 
   constructor(private crudService:CrudService){}
 
