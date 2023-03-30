@@ -66690,7 +66690,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CKEditorComponent": () => (/* binding */ CKEditorComponent),
 /* harmony export */   "CKEditorModule": () => (/* binding */ CKEditorModule)
 /* harmony export */ });
-/* harmony import */ var C_Users_juand_testSSR_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 9369);
+/* harmony import */ var C_Users_juand_OneDrive_Escritorio_proyecto_testSSR_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js */ 9369);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 4565);
 /* harmony import */ var _ckeditor_ckeditor5_watchdog_src_editorwatchdog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ckeditor/ckeditor5-watchdog/src/editorwatchdog */ 4338);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ 5110);
@@ -66875,7 +66875,7 @@ class CKEditorComponent {
   // Implementing the OnDestroy interface.
   ngOnDestroy() {
     var _this = this;
-    return (0,C_Users_juand_testSSR_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+    return (0,C_Users_juand_OneDrive_Escritorio_proyecto_testSSR_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
       if (_this.watchdog) {
         yield _this.watchdog.remove(_this.id);
       } else if (_this.editorWatchdog && _this.editorWatchdog.editor) {
@@ -66939,8 +66939,8 @@ class CKEditorComponent {
   attachToWatchdog() {
     var _this2 = this;
     const creator = /*#__PURE__*/function () {
-      var _ref = (0,C_Users_juand_testSSR_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (element, config) {
-        return _this2.ngZone.runOutsideAngular( /*#__PURE__*/(0,C_Users_juand_testSSR_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
+      var _ref = (0,C_Users_juand_OneDrive_Escritorio_proyecto_testSSR_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (element, config) {
+        return _this2.ngZone.runOutsideAngular( /*#__PURE__*/(0,C_Users_juand_OneDrive_Escritorio_proyecto_testSSR_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* () {
           _this2.elementRef.nativeElement.appendChild(element);
           const editor = yield _this2.editor.create(element, config);
           if (_this2.initiallyDisabled) {
@@ -66958,7 +66958,7 @@ class CKEditorComponent {
       };
     }();
     const destructor = /*#__PURE__*/function () {
-      var _ref3 = (0,C_Users_juand_testSSR_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (editor) {
+      var _ref3 = (0,C_Users_juand_OneDrive_Escritorio_proyecto_testSSR_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (editor) {
         yield editor.destroy();
         _this2.elementRef.nativeElement.removeChild(_this2.editorElement);
       });

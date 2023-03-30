@@ -9,6 +9,8 @@ const bodyParser = require ('body-parser');
 const mongoose = require('mongoose');
 const { Data } = require('./models');
 
+const cors = require ('cors');
+
 
 import { AppServerModule } from './src/main.server';
 
@@ -31,7 +33,7 @@ export function app(): express.Express {
   // Serve static files from /browser
   server.use(bodyParser.json({limit: '200mb'}));
   server.use(bodyParser.urlencoded({limit: '200mb', extended: true}));
-
+  server.use(cors());
 server.get('/data', async (req, res) => {
   const data = await Data.find();
   console.log(data)
@@ -57,9 +59,24 @@ server.delete('/data/:_id', async (req,res) => {
       res.json("Eliminado!");
 });
 
+server.put('/data/:_id', async (req,res) => {
+
+  const { _id } = req.params;
+   const articulo = {
+    categoria:req.body.categoria,
+    titulo:req.body.titulo,
+    subtitulo:req.body.subtitulo,
+    articulo:req.body.articulo,
+
+           }
+           await Data.findByIdAndUpdate(_id, {$set: articulo}, {new: true});
+           res.json('Articulo modificado!');
+
+           } );
+
 server.get('/data/:_id' , async(req,res) => {
   var aux = String(req.params._id)
-  console.log(aux)
+
 
     try {
         const articulo = await Data.findById({_id : aux})

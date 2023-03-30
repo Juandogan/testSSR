@@ -13,12 +13,14 @@ import { PrincipalComponent } from './componentes/principal/principal.component'
 import { DateConverterPipe } from './pipes/date-converter.pipe';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterLinkActive } from '@angular/router';
+import { Router, RouterLinkActive, ROUTES, RoutesRecognized } from '@angular/router';
 import { DocumentEditorModule } from '@txtextcontrol/tx-ng-document-editor'
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { ArticuloComponent } from './componentes/articulo/articulo.component';
 import { ResolveNotaService } from './servicios/resolve-nota.service';
 import { CrudService } from './servicios/crud.service';
+import { InnerComponent } from './componentes/inner/inner.component';
+
 
 
 @NgModule({
@@ -31,9 +33,11 @@ import { CrudService } from './servicios/crud.service';
     DateConverterPipe,
     FooterComponent,
     ArticuloComponent,
+    InnerComponent,
   ],
 
   imports: [
+
     CKEditorModule,
     FormsModule,
     RouterLinkActive,
