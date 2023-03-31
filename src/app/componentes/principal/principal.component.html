@@ -6,18 +6,32 @@
   </div>
     <!-- Loading -->
 
-    <div  *ngIf="!loading"   [@listAnimation] class="h-150 p-5 text-white bg-dark rounded-1 shadow" style="height:300px;">
+    <div class="row">
+      <div class="col-9">
 
+    <div  *ngIf="!loading"   class="h-150 p-5 text-white bg-dark rounded-1 shadow" style="height:300px;">
 
-      <h3><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-      </svg><span style="margin-left:5px; "> Bienvenidxs a Angular Documents</span> </h3>
+      <h6 class="h6-categoria">{{this.data[0].categoria}}</h6>
+
+      <h1 class="h1-titulo">   {{this.data[0].titulo}} </h1>
       <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px; font-weight: 100;">
+        {{this.data[0].subtitulo}}
 
-        Nuestro objetivo es proporcionar a los desarrolladores una fuente <b>confiable de información sobre Angular</b>, con tutoriales paso a paso, consejos y trucos, ejemplos prácticos, buenas prácticas y mucho más. Creemos que la programación con Angular no debería ser una tarea difícil o tediosa, sino algo que todos puedan disfrutar y encontrar útil.
       </p>
       <button class="btn btn-outline-light" type="button">Iniciar sesión</button>
       </div>
+    </div>
+    <div class="col-3">
+
+      <div  *ngIf="!loading"   class="h-150  text-white bg-dark rounded-1 shadow" style="padding-top: 20px; height:300px;">
+
+        </div>
+    </div>
+    </div>
+
+
+
+
 
     <br>
 <div *ngIf="!loading"   [@listAnimation] >

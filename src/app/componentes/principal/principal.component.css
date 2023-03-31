@@ -10,3 +10,9 @@
 .list-item.ng-enter.ng-enter-active {
   opacity: 1;
 }
+
+
+.h6-categoria{margin-top: -20px; color:orange}
+.h1-titulo{font-size: calc(2.3rem + .6vw);
+  font-weight: 700;
+  font-family: unset;}

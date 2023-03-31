@@ -4,6 +4,7 @@
   <div class="card-body shadow rounded-1"   >
     <a  routerLink="articulo/{{data?._id}}" >
     <img *ngIf="image" src="../../../assets/image-7.png"  width="100%" alt="" class="rounded-1 shadow p0" >
+
         <h5 class="card-title mt-3" style="text-decoration: none!important; color:black; ">{{data?.titulo}}</h5>
       </a>
     <p *ngIf="image">{{data?.subtitulo}}</p>
