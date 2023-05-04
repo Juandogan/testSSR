@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1683238941028,
+  "timestamp": 1683239785238,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.1363307d9890216b.js",
+        "/main.67ef14fa520fb6df.js",
         "/manifest.webmanifest",
         "/polyfills.f48969c87c216d05.js",
         "/runtime.50c6775e40132c18.js",
@@ -92,8 +92,8 @@
     "/assets/retro.jpg": "84a1a23d68097993a95067ab798a700a666f69ec",
     "/assets/violeta.jpg": "4eeb3274eb7cfdd39275dfc1913fd053a77ec624",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/index.html": "0254c1c419c4058c9eb7df7b2149f50a886988ef",
-    "/main.1363307d9890216b.js": "ccca3017071f52516cbc74205aec3785a0712b5a",
+    "/index.html": "7b5c78907358b7860e2757c797170c37a72ba8d0",
+    "/main.67ef14fa520fb6df.js": "840ddab2d8274d086a647acd4d258535c68afed0",
     "/manifest.webmanifest": "efc00409578de8ca014b92e9914f99e4bf52f05e",
     "/polyfills.f48969c87c216d05.js": "07cd8e4e2eefc259bf6d55fe347dca42b056c6f6",
     "/runtime.50c6775e40132c18.js": "5730fe6eee578b1f18c6eec56a2e9fa2647fbf72",
