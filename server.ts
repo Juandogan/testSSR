@@ -99,7 +99,7 @@ export function app(): express.Express {
     var link = req.files['archivos'].path  
     console.log(link)
 
-    var url = 'http://localhost:4201/upload/' + link.slice(8)
+    var url = 'http://66.97.44.139/upload/' + link.slice(8)
     console.log({ 'url': url })
     res.json({ 'url': url });
 
