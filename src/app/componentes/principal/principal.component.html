@@ -9,23 +9,31 @@
     <div class="row">
       <div class="col-9">
 
-    <div  *ngIf="!loading"   class="h-150 p-5 text-white bg-dark rounded-1 shadow" style="height:300px;">
+    <div  *ngIf="!loading"   class="h-150 p-5 text-white bg-dark rounded-1 shadow" style="padding-left:30px!important; height:420px; background-image: url('../../../assets/descarga.jpg')">
 
-      <h6 class="h6-categoria">{{this.data[0].categoria}}</h6>
+      <h6 class="h6-categoria">{{this.data[5].categoria}}</h6>
 
-      <h1 class="h1-titulo">   {{this.data[0].titulo}} </h1>
-      <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px; font-weight: 100;">
-        {{this.data[0].subtitulo}}
+      <h1 class="h1-titulo">   {{this.data[5].titulo}} </h1>
+      <p class="truncar" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px; font-weight: 100;">
+        {{this.data[5].subtitulo}}
 
       </p>
-      <button class="btn btn-outline-light" type="button">Iniciar sesión</button>
+      <button class="btn btn-danger" type="button">Ingresar</button>
       </div>
     </div>
     <div class="col-3">
 
-      <div  *ngIf="!loading"   class="h-150  text-white bg-dark rounded-1 shadow" style="padding-top: 20px; height:300px;">
+      <div  *ngIf="!loading"   class="h-150  text-white  rounded-1 shadow" style="border-radius:10px; padding-top: 20px; height:420px; background-color: rgb(83, 0, 0);">
 
+        <p  class="" style="margin-left: 25px; padding-right: 25px; color:yellow">{{data[3]?.categoria}}</p>
+        <h6 style="margin-left: 25px; padding-right: 25px; font-size: 25px!important; margin-top: -10px;">{{data[3].titulo}}</h6>
+        <p class="truncar2" style="margin-left: 25px; padding-right: 25px;">{{data[3].subtitulo}} </p>
+        <hr style="margin-left: 20px; margin-right: 20px;">
+        <p  class="" style="margin-left: 25px; padding-right: 25px; color:yellow">{{data[2]?.categoria}}</p>
+        <h6 style="margin-left: 25px; padding-right: 25px; font-size: 25px!important; margin-top: -10px;">{{data[2].titulo}}</h6>
+        <p class="truncar2" style="margin-left: 25px; padding-right: 25px;">{{data[2].subtitulo}} </p>
         </div>
+        
     </div>
     </div>
 
@@ -35,18 +43,37 @@
 
     <br>
 <div *ngIf="!loading"   [@listAnimation] >
+<div class="row">
+  <div class="col-9">
+    
   <div class="row">
     <div style="text-align: left;">
-<p style="margin: 0px ; padding:0px ;margin-left:15px">ÚLTIMOS POST</p>
-<hr style="margin: 0px ; padding:0px ; margin-top: 5px; margin-bottom: 5px;">
+<!-- <p style="margin: 0px ; padding:0px ;margin-left:15px">ÚLTIMOS POST</p> -->
+<!-- <hr style="margin: 0px ; padding:0px ; margin-top: 5px; margin-bottom: 5px;"> -->
 </div>
 
-  <div class="col-3" *ngFor="let articulo of data let i = index">
+  <div class="col-4" *ngFor="let articulo of data let i = index">
     <app-card [data]="articulo" [id]="articulo?._id"  [image]=true [@listAnimation]="data.lenght"></app-card>
     <br>
       </div>
        </div>
+  </div>
+  <div class="col-3">
+    <div  *ngIf="!loading"   class="h-150  text-white  rounded-1 shadow" style="margin-top: 10px; border-radius:10px; padding-top: 30px; height:180px;  background-color: cadetblue;">
+      <!-- <p  class="" style="margin-left: 25px; padding-right: 25px; color:yellow; margin-top: -20px">{{data[3].categoria}}</p> -->
+      <h6 style="margin-left: 25px; padding-right: 25px; font-size: 25px!important; margin-top: -13px;">{{data[1].titulo}}</h6>
+      <p class="truncar" style="margin-left: 25px; padding-right: 25px;">{{data[1].subtitulo}} </p>
+      </div>
+      <div  *ngIf="!loading"   class="h-150  text-white  rounded-1 shadow" style="margin-top: 15px; border-radius:10px; padding-top: 20px; height:180px;  background-color: cadetblue;">
+        <!-- <p  class="" style="margin-left: 25px; padding-right: 25px; color:yellow; margin-top:-15px">{{data[3].categoria}}</p> -->
+        <h6 style="margin-left: 25px; padding-right: 25px; font-size: 25px!important; margin-top: -13px;">{{data[1].titulo}}</h6>
+        <p class="truncar" style="margin-left: 25px; padding-right: 25px;">{{data[1].subtitulo}} </p>
+        </div>
+  </div>
+
+</div>
+
        <br>
-      <app-footer></app-footer>
+      
 </div>
 

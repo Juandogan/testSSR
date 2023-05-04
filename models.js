@@ -7,6 +7,7 @@ const dataSchema = new mongoose.Schema({
   categoria:String,
   articulo:String,
   imagen:String,
+  vistas:Number
 
 },{timestamps: true}
 

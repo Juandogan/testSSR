@@ -4,15 +4,25 @@ import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import { existsSync } from 'fs';
 import { join } from 'path';
-const bodyParser = require ('body-parser');
+
+const path = require('path')
+const multipart = require('connect-multiparty');
+const bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
 const { Data } = require('./models');
 
-const cors = require ('cors');
+const cors = require('cors');
 
 
 import { AppServerModule } from './src/main.server';
+
+
+const multiPartMiddleware = multipart({
+  uploadDir: 'subidas'
+
+});
+
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
@@ -31,81 +41,103 @@ export function app(): express.Express {
   // Example Express Rest API endpoints
   // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
-  server.use(bodyParser.json({limit: '200mb'}));
-  server.use(bodyParser.urlencoded({limit: '200mb', extended: true}));
+  server.use(bodyParser.json({ limit: '200mb' }));
+  server.use(bodyParser.urlencoded({ limit: '200mb', extended: true }));
   server.use(cors());
-server.get('/data', async (req, res) => {
-  const data = await Data.find();
-  console.log(data)
-  res.json(data);
-});
+  server.use(express.json());
+  server.use('/upload', express.static(path.resolve('./subidas')))
+  
+  server.get('/data', async (req, res) => {
+    const data = await Data.find();res.json(data);
+  });
 
-server.post('/data' , async (req, res)=>{
-     const data = new Data({
-      categoria:req.body.categoria,
-      titulo:req.body.titulo,
-      subtitulo:req.body.subtitulo,
-      articulo:req.body.articulo
+  server.post('/data', async (req, res) => {
+    const data = new Data({
+
+      categoria: req.body.categoria,
+      titulo: req.body.titulo,
+      subtitulo: req.body.subtitulo,
+      articulo: req.body.articulo,
+      vistas: req.body.vistas,
+      imagen: req.body.imagen
 
     });
-       await data.save();
-        res.json('Articulo creado!');
+    await data.save();
+    res.json('Articulo creado!');
 
-});
+  });
 
-server.delete('/data/:_id', async (req,res) => {
-  const { _id } = req.params;
+  server.delete('/data/:_id', async (req, res) => {
+    const { _id } = req.params;
     await Data.findByIdAndDelete(_id);
-      res.json("Eliminado!");
-});
+    res.json("Eliminado!");
+  });
 
-server.put('/data/:_id', async (req,res) => {
+  server.put('/data/:_id', async (req, res) => {
 
-  const { _id } = req.params;
-   const articulo = {
-    categoria:req.body.categoria,
-    titulo:req.body.titulo,
-    subtitulo:req.body.subtitulo,
-    articulo:req.body.articulo,
 
-           }
-           await Data.findByIdAndUpdate(_id, {$set: articulo}, {new: true});
-           res.json('Articulo modificado!');
+    const { _id } = req.params;
+    const articulo = {
+      _id: _id,
+      categoria: req.body.categoria,
+      titulo: req.body.titulo,
+      subtitulo: req.body.subtitulo,
+      articulo: req.body.articulo,
+      vistas: req.body.vistas,
+      imagen: req.body.imagen
 
-           } );
+    }
+    console.log(articulo)
+    await Data.findByIdAndUpdate(_id, { $set: articulo }, { new: true });
+    res.json('Modificado!');
 
-server.get('/data/:_id' , async(req,res) => {
-  var aux = String(req.params._id)
+  });
+
+
+  //  IMAGEN LOAD MULTIPARTY
+  server.post('/upload', multiPartMiddleware, (req:any, res) => {
+    var link = req.files['archivos'].path  
+    console.log(link)
+
+    var url = 'http://localhost:4201/upload/' + link.slice(8)
+    console.log({ 'url': url })
+    res.json({ 'url': url });
+
+
+  });
+
+  server.get('/data/:_id', async (req, res) => {
+    var aux = String(req.params._id)
 
 
     try {
-        const articulo = await Data.findById({_id : aux})
-        if (articulo === null)   {
-          const articulo = await Data.findOne({indice : aux})
+      const articulo = await Data.findById({ _id: aux })
+      if (articulo === null) {
+        const articulo = await Data.findOne({ indice: aux })
 
-          res.json(articulo)
+        res.json(articulo)
 
-        }else {
+      } else {
 
-          res.json(articulo)
+        res.json(articulo)
 
-        }
-
-
-
-
-      } catch (err) {
-        res.json('ID no encontrado..')
       }
 
-});
+
+
+
+    } catch (err) {
+      res.json('ID no encontrado..')
+    }
+
+  });
 
 
 
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
   }));
-
+  server.use('/upload', express.static(path.join(__dirname, '/subidas')));
   // All regular routes use the Universal engine
   server.get('*', (req, res) => {
     res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
@@ -144,7 +176,7 @@ const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'Error de conexión:'));
 db.once('open', () => {
-console.log('Conexión exitosa a la base de datos');
+  console.log('Conexión exitosa a la base de datos');
 });
 
 export * from './src/main.server';

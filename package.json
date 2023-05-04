@@ -34,11 +34,13 @@
     "angular-froala-wysiwyg": "^4.0.17",
     "bootstrap": "^5.2.3",
     "ckeditor5-custom-build": "file:ckeditor",
+    "connect-multiparty": "^2.2.0",
     "domino": "^2.1.6",
     "express": "^4.15.2",
     "jquery": "^3.6.4",
     "mongoose": "^7.0.1",
     "ngx-quill": "^20.0.1",
+    "path": "^0.12.7",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

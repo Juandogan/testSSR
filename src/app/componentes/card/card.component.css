@@ -3,4 +3,26 @@ hr{padding:0px; margin-top: 20px; margin-bottom: 0px;}
 a{cursor:pointer;}
 p{line-height: 21px;}
 
+.titulo{margin-left: 25px; padding-right: 25px; font-size: 25px!important; margin-top: -10px;}
 
+
+.truncar {
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-wrap: break-word;
+    overflow: hidden!important;
+ 
+  }
+
+  
+.truncar2 {
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow-wrap: break-word;
+  overflow: hidden!important;
+
+}

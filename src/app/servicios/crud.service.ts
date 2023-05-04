@@ -18,10 +18,10 @@ export class CrudService {
 
   constructor(private http:HttpClient) {}
 
-   uploadFile(formData:any){console.log('Bandera', formData)
-   return this.http.post('/upload', formData)   // en produccion poner '/upload' por this.URL_API2
+    uploadFile(formData:any){console.log('Bandera', formData)
+    return this.http.post('/upload', formData)   // en produccion poner '/upload' por this.URL_API2
 
-    }
+      }
 
 //CRUD
 
@@ -54,7 +54,6 @@ export class CrudService {
     return this.http.delete(this.URL_API + `/${_id}`);
 
   };
-
 
 
 

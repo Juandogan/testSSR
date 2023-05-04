@@ -13,7 +13,7 @@ export class DateConverterPipe implements PipeTransform {
     const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
     const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
     const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
-
+    
     let resultado = '';
 
     if (dias > 0) {

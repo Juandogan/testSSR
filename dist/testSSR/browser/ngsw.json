@@ -1,0 +1,121 @@
+{
+  "configVersion": 1,
+  "timestamp": 1683233334761,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.f80c0cedbfefe9bf.js",
+        "/manifest.webmanifest",
+        "/polyfills.f48969c87c216d05.js",
+        "/runtime.50c6775e40132c18.js",
+        "/styles.8d53b213c3cf263e.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/02620c76-b274-4034-9d53-e48c2fe6259a.jpg",
+        "/assets/0778d2fb-7e6a-47b5-a7e4-5276d80b17cc.jpg",
+        "/assets/3464b847-32e4-4f61-8e45-b829ed9fb783.jpg",
+        "/assets/5acff2b2-865e-4a90-be56-bfff3ebc344c.jpg",
+        "/assets/5f45287c-9ac9-4c17-b2c0-acaaddb43638.jpg",
+        "/assets/7983efa6-1267-4730-845e-f984748c5644.jpg",
+        "/assets/Code photo.jpg",
+        "/assets/Fer.jpg",
+        "/assets/Unique WhatsApp Wallpaper Ideas.jpg",
+        "/assets/angular icon.png",
+        "/assets/angularUniversalIcon.png",
+        "/assets/dale.png",
+        "/assets/descarga.jpg",
+        "/assets/fondo lateral.png",
+        "/assets/fondoCardLateral.png",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/image-7.png",
+        "/assets/marcas.jpg",
+        "/assets/rayas.jpg",
+        "/assets/retro.jpg",
+        "/assets/violeta.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/02620c76-b274-4034-9d53-e48c2fe6259a.jpg": "8a7cf4efef01c1c35c6648f96a0fabc978e8eba8",
+    "/assets/0778d2fb-7e6a-47b5-a7e4-5276d80b17cc.jpg": "4eeb3274eb7cfdd39275dfc1913fd053a77ec624",
+    "/assets/3464b847-32e4-4f61-8e45-b829ed9fb783.jpg": "a38d9c51c735b88403bed1aa839a1c161a563c46",
+    "/assets/5acff2b2-865e-4a90-be56-bfff3ebc344c.jpg": "882f5d9ad37b60d3d292ffd0ae63879e4b13386a",
+    "/assets/5f45287c-9ac9-4c17-b2c0-acaaddb43638.jpg": "b8ed5ad34910f77ac72baac7299ad6c48a7db775",
+    "/assets/7983efa6-1267-4730-845e-f984748c5644.jpg": "8441feb76150edcc74d2943c26c74a25360b8bd7",
+    "/assets/Code photo.jpg": "21b8a84c8fd181ef92e1b38fb7123ca9a8bbebc1",
+    "/assets/Fer.jpg": "e306e3e7b540c3cdf3f26f155b010bb108a91740",
+    "/assets/Unique WhatsApp Wallpaper Ideas.jpg": "fa4383210084eaf1e71ef5d1d0cdcf61eb2621e8",
+    "/assets/angular icon.png": "82125bf1aeb2c19065406fb7e9adb0c3e3887581",
+    "/assets/angularUniversalIcon.png": "480b029706606692c29096764ce3601187dedde9",
+    "/assets/dale.png": "d9e3cd8aa1cf4f5df9d7bc3269fe4d6174c0c7fc",
+    "/assets/descarga.jpg": "d39f2174b5c9c79b47c049e849aa9ffb263078c9",
+    "/assets/fondo lateral.png": "f79c0f0bc7ed1443ddebe05506869c1bdfd61e1c",
+    "/assets/fondoCardLateral.png": "bb86dc601f38e70967975b36b2232248c86bdb25",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/image-7.png": "c3891738c191d39e9c090684d51fd776684b06ed",
+    "/assets/marcas.jpg": "0706f10f978856394b4272b488800c1bdf54226f",
+    "/assets/rayas.jpg": "8441feb76150edcc74d2943c26c74a25360b8bd7",
+    "/assets/retro.jpg": "84a1a23d68097993a95067ab798a700a666f69ec",
+    "/assets/violeta.jpg": "4eeb3274eb7cfdd39275dfc1913fd053a77ec624",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "4a9e2f1caab2bf8b299235be165c7219510e4925",
+    "/main.f80c0cedbfefe9bf.js": "218505eb67c281b7c31cad93b999346d1fc9d3ae",
+    "/manifest.webmanifest": "efc00409578de8ca014b92e9914f99e4bf52f05e",
+    "/polyfills.f48969c87c216d05.js": "07cd8e4e2eefc259bf6d55fe347dca42b056c6f6",
+    "/runtime.50c6775e40132c18.js": "5730fe6eee578b1f18c6eec56a2e9fa2647fbf72",
+    "/styles.8d53b213c3cf263e.css": "8603c8e29abc30cc0ed620044cdadc495912e682"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
