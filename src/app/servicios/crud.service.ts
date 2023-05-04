@@ -14,7 +14,7 @@ import { HttpClient } from '@angular/common/http';
 export class CrudService {
 
   data = new Data
-    readonly URL_API  = "http://localhost:4201/data";
+    readonly URL_API  = "http://http://66.97.44.139/data";
 
   constructor(private http:HttpClient) {}
 
