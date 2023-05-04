@@ -2,6 +2,8 @@
 ng new testSSR
 
 
+TFcu4J8gNDYY
+
 ng add @nguniversal/express-engine
 
 tr			     /ejecutar en desarollo	
